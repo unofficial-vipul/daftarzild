@@ -3,9 +3,12 @@ from django.shortcuts import render, get_object_or_404
 from posts.models import Post
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.conf import settings
 
 def home(request):
 	today = timezone.now().date()
+	print 'static root: ', settings.STATIC_ROOT
+	print 'base_dir :', settings.BASE_DIR
 	queryset_list = Post.objects.active() #.order_by("-timestamp")
 	if request.user.is_staff or request.user.is_superuser:
 		queryset_list = Post.objects.all()
