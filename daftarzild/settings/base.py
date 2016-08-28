@@ -106,7 +106,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static', 'static_dirs'),
 ]
 
 #STATIC_ROOT = '/Users/jmitch/desktop/lwc/src/static/static_root/'
