@@ -1,1 +1,1 @@
-web: gunicorn daftarzild.wsgi --log-file -
+web: gunicorn daftarzild.wsgi 
