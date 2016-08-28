@@ -1,4 +1,5 @@
 .DS_Store
+daftarzild/settings/local.py
 .pyc
 db.sqlite3
 
