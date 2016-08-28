@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block body %}
+    <!-- Page Content -->
+    <div class="col-lg-12 member-name">
+                <h1 >News</h1>
+            </div>
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-12">
+                {% for obj in object_list %}
+                <!-- First Blog Post -->
+                <div class='news-card'>
+                
+                    {% if obj.image %}
+                    <div class='news-image' style="background-image:url('{{ STATIC_URL }}{{ obj.image.url }}')">
+                    </div>
+                    {% endif %}
+                    <div class='news-details'>
+                        <h2>
+                            <a class='news-title' href="{{ obj.get_absolute_url }}">{{ obj.title }}</a>
+                        </h2>
+                        <p><i class="fa fa-clock-o"></i> {{ obj.timestamp }}</p>
+                        <hr>
+                        <p class="">{{ obj.get_markdown|truncatechars_html:420 }}</p>
+                        <a class="btn btn-primary" href="{{ obj.get_absolute_url }}">Read More <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <hr>
+
+
+                </div>
+                <hr>
+
+                {% endfor %}
+                                <!-- Pager -->
+                 <!-- Pagination -->
+                     <div class="pagination">
+                        <span class="step-links">
+                            {% if object_list.has_previous %}
+                                <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                            </span>
+
+                            {% if object_list.has_next %}
+                                <a href="?{{ page_request_var }}={{ object_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock %}

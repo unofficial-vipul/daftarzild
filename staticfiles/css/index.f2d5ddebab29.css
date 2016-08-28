@@ -1,0 +1,311 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+.bg{
+    background:url("/static/images/guitar.a3c09e0d63ef.jpg");
+    background-size:cover;
+    width: 100%;
+    height:100%;
+}
+.banner-info{
+    padding: 9em 0 12em;
+}
+.banner-info h1{
+    font-weight: 700;
+    font-size: 3.5em;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 70%;
+    display: inline-block;
+    line-height: 1.3em;
+}
+.banner-info span{
+    width:15%;
+    height:1px;
+    background:#35C2F8;
+    display:inline-block;
+}
+.banner-info p{
+    color: #CCCCCC;
+    font-weight:400;
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 1em auto;
+    width: 50%;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+.band-member-photo{
+    border-radius: 10px;
+    display:inline-block;
+    width: 50%;
+    padding: 10px;
+}
+
+.band-member-photo img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.band-member-stats{
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.band-member-story{
+    font-family: 'calluna-sans,"Gill Sans",Calibri,"Trebuchet MS",sans-serif';
+    font-size:20px;
+}
+
+.member-name{
+    background-color:white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Futura";
+    text-transform: uppercase;
+}
+
+.news-card{
+    display: table;
+    border-radius: 10px;
+    background-color:white;
+    width:100%;
+}
+
+.homepage-news-card{
+    display: table;
+    border-radius: 10px;
+    background-color:white;
+    width:100%;
+}
+
+.news-image{
+    display: table-cell;
+    width:30%;
+    height: 100%;
+    vertical-align: middle;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.news-image img{
+    max-width: 100%;
+}
+.news-details{
+    padding-bottom: 10px;
+    display: table-cell;
+    width: 70%;
+    padding-left: 10px;
+}
+
+.news-title{
+    font-family: 'calluna-sans';
+    font-size: 22px;
+}
+
+.news-title a{
+    color: #CCCCC;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    border-bottom-left-radius: 10px;
+}
+
+.home-news-card{
+    display:table;
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.home-newscard-image{
+    display: table-cell;
+    width:60%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+.home-newscard-image img{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    height: 60vh !important;
+}
+.home-newscard-content{
+    background-color: white;
+    display: table-cell;
+    width:40%;
+    height: 100%;
+    vertical-align: top;
+    border-top-right-radius: 10px;    
+    border-bottom-right-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+
+.custom_carousel{
+    height: 60vh !important;
+}
+
+.carousel-inner{
+    border-bottom-left-radius: 10px;
+}
+
+.well-content{
+    height: 30%;
+    width: 100%;
+    text-align:center;
+}
+.well-image{
+    width: 100%;
+    height: 80%;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.well{
+    height: 40vh !important;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.news_content p{
+    font-family: "Gill Sans";
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.home-other-news{
+    margin-top: 25px;
+}
+
+.othernews-card{
+    display: inline-block;
+    width: 24%;
+
+    background-color: white;
+    border-radius: 10px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: 20px;
+
+}
+
+.othernews-card img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
