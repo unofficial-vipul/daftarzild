@@ -7,8 +7,6 @@ from django.conf import settings
 
 def home(request):
 	today = timezone.now().date()
-	print 'static root: ', settings.STATIC_ROOT
-	print 'base_dir :', settings.BASE_DIR
 	queryset_list = Post.objects.active() #.order_by("-timestamp")
 	if request.user.is_staff or request.user.is_superuser:
 		queryset_list = Post.objects.all()
@@ -46,7 +44,6 @@ def home(request):
 	return render(request, 'index.html', context)
 
 def about(request):
-	print "bec"
 	return render(request, 'about.html')
 
 

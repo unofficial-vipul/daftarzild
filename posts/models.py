@@ -107,12 +107,10 @@ def create_slug(instance, new_slug=None):
 
 
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
-    print ('hello its working.')
     if not instance.slug:
         instance.slug = create_slug(instance)
 
     if instance.content:
-        print instance.content
         read_time_var = get_read_time(instance.get_markdown())
         instance.read_time = read_time_var
 

@@ -20,7 +20,6 @@ def comment_thread(request, id):
 
 	form = CommentForm(request.POST or None, initial=initial_data)
 	if form.is_valid():
-		print form.cleaned_data
 		c_type = form.cleaned_data.get('content_type')
 		content_type = ContentType.objects.get(model=c_type)
 		obj_id = form.cleaned_data.get('object_id')
@@ -34,7 +33,6 @@ def comment_thread(request, id):
 
 		if parent_id:
 			parent_qs = Comment.objects.filter(id=parent_id)
-			print parent_qs
 			if parent_qs.exists():
 				parent_obj = parent_qs.first()
 

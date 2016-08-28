@@ -3,10 +3,8 @@ from .forms import ContactForm
 import soundcloud
 # Create your views here.
 def contact(request):
-	print "contact page"
 	form = ContactForm(request.POST or None)
 	if form.is_valid():
-		print form.cleaned_data
 
 	ctx = {
 		"form":form,
@@ -26,10 +24,8 @@ def music(request):
 				username='vipul-sharma-844733033',
 				password='readit1234'
 				)
-	print client.get('/me')
 	playlist_url = 'https://soundcloud.com/vipul-sharma-844733033/sets/trippin'
 	embed_info = client.get('/oembed', url=playlist_url)
-	print embed_info.html
 	return render(request, 'music.html')
 
 
