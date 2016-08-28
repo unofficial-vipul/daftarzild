@@ -137,7 +137,9 @@ def post_update(request, slug=None):
 	form = PostForm(request.POST or None, request.FILES or None, instance=instance)
 	if form.is_valid():
 		instance = form.save(commit=False)
+		instance.content..encode('utf-8').strip()
 		instance.save()
+
 		messages.success(request, "<a href='#'>Item</a> Saved", extra_tags='html_safe')
 		return HttpResponseRedirect(instance.get_absolute_url())
 
