@@ -36,16 +36,21 @@
     <!-- Header Carousel -->
     
     	<!-- Navigation -->
-	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	            <!-- Brand and toggle get grouped for better mobile display -->
-	            <div class="navbar-header">
-	                <a class="navbar-brand" href='{% url "home" %}'>Daftar Zild</a>
-	            </div>
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	                <ul class="nav navbar-nav navbar-right">
+	                <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href='{% url "home" %}'>Login</a>
+                        </li>
+                        <li>
+                            <a href='{% url "home" %}'>Sign Up</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
 	                    <li>
-	                        {# <a href='{% url "about" %}'>About</a> #}
+	                        <a href='{% url "home" %}'>Home</a>
 	                    </li>
 	                    <li>
 	                        <a href={% url "dzadmin:contact" %}>Contact</a>
@@ -78,9 +83,8 @@
 	<div class= "bg">
         <div class="container">
 					<div class="banner-info text-center">
-						<h1>Music</h1><br />
-						<span> </span>
-						<p>Helps me Escape from the reality I Live in.</p>
+						<h1>Daftar Zild</h1>
+					
 					</div>
 		</div>
     </div>
@@ -156,7 +160,7 @@
                         <a href="{{news.get_absolute_url}}"><div class="well-image" style="background-image:url('{{ STATIC_URL }}{{ news.image.url }}')">
                     </div>
                     <div class='well-content'>
-                        <h4>{{ news.title|truncatechars_html:80  }}</h4>
+                        <h4>{{ news.title|truncatechars_html:40  }}</h4>
                     </div>
                     <!-- /.row -->
                     </div>
@@ -212,14 +216,6 @@
             carousel2.carousel(to);
         });
 
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 500) {
-            $('.navbar').slideUp();
-        }
-        else {
-            $('.navbar').slideDown();
-        }
-    },false);
 
     $(".comment-reply").hide()
 

@@ -69,7 +69,7 @@ header.carousel .fill {
 }
 
 .bg{
-    background:url('/static/images/daf.jpg');
+    background:url("/static/images/daf.36a06987ed35.jpg");
     background-size:cover;
     width: 100%;
     height:50%;
@@ -157,6 +157,7 @@ footer {
 .member-name{
     background-color:white;
     margin-bottom: 20px;
+    margin-top: 20px;
     font-family: "Futura";
     text-transform: uppercase;
 }

@@ -69,10 +69,10 @@ header.carousel .fill {
 }
 
 .bg{
-    background:url('/static/images/guitar.jpg');
+    background:url('/static/images/daf.jpg');
     background-size:cover;
     width: 100%;
-    height:100%;
+    height:50%;
 }
 .banner-info{
     padding: 9em 0 12em;
@@ -157,7 +157,6 @@ footer {
 .member-name{
     background-color:white;
     margin-bottom: 20px;
-    margin-top: 20px;
     font-family: "Futura";
     text-transform: uppercase;
 }
