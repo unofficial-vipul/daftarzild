@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'posts',
     'comments',
+    'dzadmin',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,3 +115,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

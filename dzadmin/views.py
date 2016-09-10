@@ -1,9 +1,17 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm
 import soundcloud
 # Create your views here.
 def contact(request):
-	form = ContactForm(request.POST or None)
+	form = ContactForm(request.POST or None)	
+	if form.is_valid():
+		sub = form.cleaned_data['subject']
+		msg = form.cleaned_data['msg']
+		fromemail = form.cleaned_data['email']
+		toemail = 'vipul.sharma029@gmail.com'
+		send_mail( sub, msg, fromemail, [toemail], fail_silently=True )
+
 	ctx = {
 		"form":form,
 		}
