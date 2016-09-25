@@ -1,6 +1,5 @@
 .DS_Store
 daftarzild/settings/local.py
-.pyc
 db.sqlite3
 
 # Byte-compiled / optimized / DLL files
@@ -13,6 +12,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+*.pyc
 env/
 build/
 develop-eggs/
